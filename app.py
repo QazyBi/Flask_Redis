@@ -18,13 +18,13 @@ def hello():
 
     html = "<html>" \
            "<head>" \
-           "<link rel='icon' type='image/png' href='https://github.com/QazyBi/f20/blob/master/favicon-32x32.png'>" \
+           "<link rel='icon' type='image/png' href='https://raw.githubusercontent.com/QazyBi/f20/master/favicon-32x32.png'>"\
            "</head>" \
            "<body>" \
-               "<img src='https://sun3-10.userapi.com/4-GMANnfOvb3k7HODqwOILCwZi_9xlDPZ60i8w/TfDIEcPqpbc.jpg'>"\
-               "<h3>Hello {name}!</h3>" \
-               "<b>Hostname:</b> {hostname}<br/>" \
-               "<b>Visits:</b> {visits}"\
+           "<img src='https://sun3-10.userapi.com/4-GMANnfOvb3k7HODqwOILCwZi_9xlDPZ60i8w/TfDIEcPqpbc.jpg' style='width:300px; height:400px;'>"\
+           "<h3>Hello {name}!</h3>" \
+           "<b>Hostname:</b> {hostname}<br/>" \
+           "<b>Visits:</b> {visits}"\
            "</body>"\
            "</html>"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
