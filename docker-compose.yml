@@ -1,0 +1,21 @@
+version: "3"
+services:
+    web:
+        image: qazybi/repo
+        ports:
+            - "80:80"
+        depends_on:
+            - redis
+        networks:
+            - webnet
+    redis:
+        image: redis
+        ports:
+          - "6379:6379"
+        volumes:
+          - "/home/docker/data:/data"
+        command: redis-server --appendonly yes
+        networks:
+          - webnet
+networks:
+    webnet:
